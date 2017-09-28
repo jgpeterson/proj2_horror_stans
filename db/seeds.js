@@ -31,20 +31,20 @@ const Regal = new TheaterModel({ name: 'Regal', address: '425 Mary Way' })
 const Fox = new TheaterModel({ name: 'Fox', address: '1428 Elm Street' })
 
 const horrorCon = new EventModel({ name: 'Horrorcon', type: 'Festival', date: '10/30/2017' })
-const bloodyDisgusting = new EventModel({ name: 'Big Snowboard', price: 123.45 })
-const blueSnowboard = new SnowboardModel({ name: 'Blue Snowboard', price: 123.45 })
+const bloodyDisgusting = new EventModel({ name: 'Bloody Disgusting', type: 'Festival', date: '10/31/2017' })
+const goreHound = new EventModel({ name: 'Gore Hound', type: 'Festival', date: '10/29/2017' })
 
 // Here we assign some snowboards to each company.
-const companies = [burton, dc, ktwo]
-const snowboards = [littleSnowboard, bigSnowboard, blueSnowboard]
+const theaters = [Amc, Regal, Fox]
+const events = [horrorCon, bloodyDisgusting, goreHound]
 
-companies.forEach((company) => {
+theaters.forEach((theater) => {
 
-    company.snowboards = snowboards
+    theater.events = events
 
-    company.save()
-        .then((company) => {
-            console.log(`${company.name} saved!`)
+    theater.save()
+        .then((theaters) => {
+            console.log(`${theater.name} saved!`)
         })
         .catch((error) => {
             console.log(error)
