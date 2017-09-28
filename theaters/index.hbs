@@ -1,0 +1,16 @@
+<div>
+
+    <h1>Upcoming Horror Events</h1>
+
+    <h3>Theaters:</h3>
+    <div>
+        <a href="/theaters/new">Add New Theater</a>
+    </div>
+    {{#each theaters}}
+        <div>
+            {{this.name}} - {{this.address}}
+            <a href="/theaters/{{this._id}}">{{this.name}} Info</a>
+            <a href="/theaters/{{this._id}}/events">{{this.name}}'s Events</a>
+        </div>
+    {{/each}}
+</div>
