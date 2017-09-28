@@ -18,3 +18,8 @@ router.get('/', (request, response) => {
         console.log(error)
     })
 })
+
+
+router.get('/new', (request, response) => {
+    response.render('theaters/new')
+})
