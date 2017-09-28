@@ -8,11 +8,11 @@ const EventSchema = new Schema({
         type: String,
         required: true
     },
-    Type: {
+    type: {
         type: String,
         required: true
     },
-    Date: {
+    date: {
         type: String,
         required: true
     }
@@ -28,7 +28,7 @@ const TheaterSchema = new Schema({
         type: String,
         required: true
     },
-    Events: [EventSchema]
+    events: [EventSchema]
 });
 
 // Create models for each schema
