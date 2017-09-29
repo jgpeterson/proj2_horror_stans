@@ -10,7 +10,9 @@
     <div id="theaterlist">
         <ul>
     {{#each theaters}}
-          <li><button><a href="/theaters/{{this._id}}/events">{{this.name}}</a></li></button>
+          <li>
+              
+              <a class="screen" href="/theaters/{{this._id}}/events">{{this.name}}</a></li>
         
     {{/each}}
         </ul>

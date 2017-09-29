@@ -1,48 +1,64 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:red;
 }
 
 a {
-  color: #00B7FF;
+  color: black;
 }
 
-#centeredmenu {
+h1 {
+
+  text-align: center;
+}
+
+.screen {
+
+  font-size: 18px;
+}
+
+#theaterlist {
   float:left;
   width:100%;
   background:#fff;
-  border-bottom:4px solid #000;
   overflow:hidden;
   position:relative;
+  font-size:100;
 }
 #theaterlist ul {
   clear:left;
   float:left;
   list-style:none;
-  margin:0;
+  margin:100;
   padding:0;
   position:relative;
   left:50%;
   text-align:center;
+  font-size:100;
+  
 }
 #theaterlist ul li {
   display:block;
   float:left;
   list-style:none;
-  margin:0;
+  margin:3em;
   padding:0;
   position:relative;
   right:50%;
+  font-size:100;
 }
 #theaterlist ul li a {
   display:block;
-  margin:0 0 0 1px;
-  padding:3px 10px;
+  margin:0;
+  padding:6em;
   background:#ddd;
   color:#000;
   text-decoration:none;
-  line-height:1.3em;
+  line-height:.3em;
+  font-size:100;
 }
+
 #theaterlist ul li a:hover {
   background:#369;
   color:#fff;
@@ -52,8 +68,13 @@ a {
   color:#fff;
   background:#000;
   font-weight:bold;
+  font-size:100;
 }
 
-.h1 {
+.header {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row; */
   text-align: center
 }
