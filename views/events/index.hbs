@@ -9,14 +9,14 @@
     <div>
         <a href="/theaters">Back to Theaters</a>
     </div>
-
+<div class="list">
     {{#each theater.events}}
         <div>
             {{this.name}} - {{this.date}}
             <a href="/theaters/{{../theater._id}}/events/{{this._id}}">View</a>
         </div>
     {{/each}}
-
+</div>
     <div>
         <img src="https://i.imgur.com/Ny0SuzJm.png" alt="AMC Info">
     </div>
