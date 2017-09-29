@@ -26,7 +26,7 @@ TheaterModel.remove({}, function (err) {
 });
 
 // Create some Companies and Snowboards
-const Amc = new TheaterModel({ name: 'Amc', address: '619 Church St' })
+const Amc = new TheaterModel({ name: 'Amc', address: '619 Church St',  })
 const Regal = new TheaterModel({ name: 'Regal', address: '425 Mary Way' })
 const Fox = new TheaterModel({ name: 'Fox', address: '1428 Elm Street' })
 
