@@ -19,6 +19,7 @@ router.get('/', (request, response) => {
 })
 
 
+
 router.get('/new', (request, response) => {
     
     const theaterId = request.params.theaterId
@@ -32,6 +33,8 @@ router.get('/new', (request, response) => {
 router.post('/', (request, response) => {
     const theaterId = request.params.theaterId
     const newEvent = request.body
+    console.log(newEvent)
+    console.log(newEvent.address)
 
     TheaterModel.findById(theaterId)
         .then((theater) => {
@@ -41,6 +44,9 @@ router.post('/', (request, response) => {
         })
         .then((theater) => {
             response.redirect(`/theaters/${theaterId}/events`)
+        })
+        .catch((error) => {
+            console.log(error)
         })
 })
 
@@ -113,12 +119,17 @@ router.get('/:eventId/delete', (request, response) => {
 
     TheaterModel.findById(theaterId)
         .then((theater) => {
-            const event = theater.events.id(eventId).remove()
+            console.log(theater);
+            const event = theater.events.id(eventId)//.remove()
+            console.log(event);
 
             return theater.save()
         })
         .then(() => {
             response.redirect(`/theaters/${theaterId}/events`)
+        })
+        .catch((error) => {
+            response.send(error)
         })
 })
 

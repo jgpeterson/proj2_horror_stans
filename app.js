@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 const methodOverride = require('method-override')
 
+mongoose.Promise = global.Promise
 mongoose.connect(process.env.MONGODB_URI);
 
 var indexController = require('./routes/indexController');

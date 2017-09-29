@@ -20,9 +20,13 @@ router.get('/', (request, response) => {
 })
 
 
+//new 
+
 router.get('/new', (request, response) => {
     response.render('theaters/new')
 })
+
+
 
 router.post('/', (request, response) => {
     console.log('route hit')
