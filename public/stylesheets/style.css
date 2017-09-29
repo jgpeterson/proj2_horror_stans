@@ -1,16 +1,20 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color:red;
+  background-color: black;
 }
 
 a {
-  color: black;
+  color: red;
 }
 
 h1 {
-
+  color: red;
   text-align: center;
+}
+
+h3 {
+  color: red;
 }
 
 .screen {
@@ -21,7 +25,7 @@ h1 {
 #theaterlist {
   float:left;
   width:100%;
-  background:#fff;
+  background:black;
   overflow:hidden;
   position:relative;
   font-size:100;
@@ -53,7 +57,7 @@ h1 {
   margin:0;
   padding:6em;
   background:#ddd;
-  color:#000;
+  color: red;
   text-decoration:none;
   line-height:.3em;
   font-size:100;
