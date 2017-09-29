@@ -9,8 +9,7 @@ var mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGODB_URI);
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+var indexController = require('./routes/indexController');
 
 var app = express();
 
@@ -27,8 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+app.use('/', indexController);
 
 const theaterController = require('./routes/theaterController');
 app.use('/theaters/', theaterController);

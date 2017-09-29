@@ -10,7 +10,7 @@ router.get('/', (request, response) => {
 
     TheaterModel.find({})
     .then((theaters) => {
-        response.render('companies/index', {
+        response.render('theaters/index', {
             theaters: theaters
         })
     })
