@@ -6,11 +6,13 @@
     <div>
         <a href="/theaters/new">Add New Theater</a>
     </div>
-    <div class="theater-list">
+
+    <div id="theaterlist">
+        <ul>
     {{#each theaters}}
-        <div>
-            <button><a href="/theaters/{{this._id}}/events">{{this.name}}</a></button>
-        </div>
+          <li><button><a href="/theaters/{{this._id}}/events">{{this.name}}</a></li></button>
+        
     {{/each}}
+        </ul>
     </div>
 </div>
