@@ -6,12 +6,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+const methodOverride = require('method-override')
 
 mongoose.connect(process.env.MONGODB_URI);
 
 var indexController = require('./routes/indexController');
 
 var app = express();
+
+app.use(methodOverride('_method'))
 
 
 // view engine setup
@@ -30,6 +33,9 @@ app.use('/', indexController);
 
 const theaterController = require('./routes/theaterController');
 app.use('/theaters/', theaterController);
+
+const eventController = require('./routes/eventController');
+app.use('/theaters/:theaterId/events', eventController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

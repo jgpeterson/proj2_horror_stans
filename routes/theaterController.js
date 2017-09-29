@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router({mergeParams: true})
 
 const Schema = require("../db/schema.js");
 const TheaterModel = Schema.TheaterModel;
@@ -25,6 +25,7 @@ router.get('/new', (request, response) => {
 })
 
 router.post('/', (request, response) => {
+    console.log('route hit')
     const newTheater = request.body
 
     TheaterModel.create(newTheater)
@@ -62,6 +63,21 @@ router.put('/:theaterId', (request, response) => {
     .catch((error) => {
         console.log(error)
     })
+})
+
+router.get('/:theaterId', (request, response) => {
+
+    const theaterId = request.params.theaterId
+
+    TheaterModel.findById(theaterId)
+        .then((theater) => {
+            response.render('theaters/show', {
+                theater: theater
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 })
 
 

@@ -73,7 +73,7 @@ router.put('/:eventId', (request, response) => {
     const updatedEvent = request.body
 
     TheaterModel.findById(theaterId)
-        .then((company) => {
+        .then((theater) => {
             const event = theater.events.id(eventId)
 
             event.name = updatedEvent.name
