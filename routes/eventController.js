@@ -17,3 +17,13 @@ router.get('/', (request, response) => {
            console.log(error)
        })
 })
+
+
+router.get('/new', (request, response) => {
+    
+    const theaterId = request.params.theaterId
+
+    response.render('events/new', {
+        theaterId: theaterId
+    })
+})
