@@ -105,3 +105,21 @@ router.get('/:eventId', (request, response) => {
         console.log(error)
     })
 })
+
+router.get('/:eventId/delete', (request, response) => {
+    
+    const theaterId = request.params.theaterId 
+    const eventId = request.params.eventId
+
+    TheaterModel.findById(theaterId)
+        .then((theater) => {
+            const event = theater.events.id(eventId).remove()
+
+            return theater.save()
+        })
+        .then(() => {
+            response.redirect(`/theaters/${theaterId}/events`)
+        })
+})
+
+module.exports = router
