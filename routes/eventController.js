@@ -27,3 +27,39 @@ router.get('/new', (request, response) => {
         theaterId: theaterId
     })
 })
+
+
+router.post('/', (request, response) => {
+    const theaterId = request.params.theaterId
+    const newEvent = request.body
+
+    TheaterModel.findById(theaterId)
+        .then((theater) => {
+            theater.events.push(newEvent)
+            
+            return theater.save()
+        })
+        .then((theater) => {
+            response.redirect(`/theaters/${theaterId}/events`)
+        })
+})
+
+
+router.get('/:eventId/edit', (request, response) => {
+    
+    const theaterId = request.params.theaterId
+    const eventId = request.params.eventId
+
+    TheaterModel.findById(theaterId)
+        .then((theater) => {
+            const event = theater.events.id(eventId)
+
+            response.render('events/edit', {
+                event: event,
+                theaterId: theaterId
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
