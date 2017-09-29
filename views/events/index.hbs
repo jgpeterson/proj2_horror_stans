@@ -1,0 +1,19 @@
+<div>
+    <h1>{{theater.name}}'s Events</h1>
+
+    <div>
+        <a href="/theaters/{{theater._id}}/events/new">Create a New Event</a>
+    </div>
+
+
+    <div>
+        <a href="/theaters">Back to Theaters</a>
+    </div>
+
+    {{#each theater.events}}
+        <div>
+            {{this.name}} - {{this.date}}
+            <a href="/theaters/{{../theater._id}}/events/{{this._id}}">View</a>
+        </div>
+    {{/each}}
+</div>
