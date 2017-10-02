@@ -12,6 +12,9 @@
     </div>
     </br>
     <a href="/theaters/{{theater._id}}/delete">Delete Theater</a>
+    <br>
+    <br>
+
 <div class="list">
     {{#each theater.events}}
         <div>
@@ -21,11 +24,15 @@
             <div>
             <a href="/theaters/{{../theater._id}}/events/{{this._id}}/delete">Delete Event</a>
         </div>
+    
     {{/each}}
 </div>
+
    <div class="pic">
        
          <img src="{{theater.location}}" alt="Location Info">
+
+    
 
      </div>
 </div>
