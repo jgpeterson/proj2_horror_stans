@@ -15,6 +15,9 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  color: white;
+}
 h3 {
   color: red;
 }
@@ -31,6 +34,14 @@ h3 {
 .screen {
 
   font-size: 18px;
+}
+
+.share {
+  color:red;
+}
+
+.upcoming {
+  text-align:center;
 }
 
 #theaterlist {
@@ -93,6 +104,12 @@ h3 {
   flex-direction:row; */
   text-align: center
 }
-.list{
+.list {
   color:red;
+}
+
+.stans {
+  color:white;
+  flex:row;
+  float:right;
 }
