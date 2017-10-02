@@ -30,6 +30,10 @@ const TheaterSchema = new Schema({
      location: {
         type: String
     },
+    decoration: {
+        type: String,
+
+    },
     events: [EventSchema]
 });
 

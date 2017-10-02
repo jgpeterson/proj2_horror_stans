@@ -120,7 +120,7 @@ router.get('/:eventId/delete', (request, response) => {
     TheaterModel.findById(theaterId)
         .then((theater) => {
             console.log(theater);
-            const event = theater.events.id(eventId)//.remove()
+            const event = theater.events.id(eventId).remove()
             console.log(event);
 
             return theater.save()

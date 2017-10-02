@@ -16,10 +16,14 @@
         <div>
             {{this.name}} - {{this.date}}
             <a href="/theaters/{{../theater._id}}/events/{{this._id}}">View</a>
+            </div>
+            <div>
+            <a href="/theaters/{{../theater._id}}/events/{{this._id}}/delete">Delete Event</a>
         </div>
     {{/each}}
 </div>
    <div class="pic">
          <img src="{{theater.location}}" alt="Location Info">
+         <img src="{{theater.decoration}}" alt="extra stuff">
      </div>
 </div>
