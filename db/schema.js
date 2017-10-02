@@ -27,6 +27,9 @@ const TheaterSchema = new Schema({
         type: String,
         required: true
     },
+     location: {
+        type: String
+    },
     events: [EventSchema]
 });
 
@@ -39,3 +42,4 @@ module.exports = {
     TheaterModel: TheaterModel,
     EventModel: EventModel
 }
+

@@ -26,9 +26,9 @@ TheaterModel.remove({}, function (err) {
 });
 
 // Create some Companies and Snowboards
-const Amc = new TheaterModel({ name: 'Amc', address: '619 Church St',  })
-const Regal = new TheaterModel({ name: 'Regal', address: '425 Mary Way' })
-const Fox = new TheaterModel({ name: 'Fox', address: '1428 Elm Street' })
+const Amc = new TheaterModel({ name: 'Amc', address: '619 Church St', location: "https://i.imgur.com/Ny0SuzJm.png"})
+const Regal = new TheaterModel({ name: 'Regal', address: '425 Mary Way', location: "https://i.imgur.com/J90yo7hm.png"})
+const Fox = new TheaterModel({ name: 'Fox', address: '1428 Elm Street', location: "https://i.imgur.com/yBPGBWLm.png"})
 
 const horrorCon = new EventModel({ name: 'Horrorcon', type: 'Festival', date: '10/30/2017' })
 const bloodyDisgusting = new EventModel({ name: 'Bloody Disgusting', type: 'Festival', date: '10/31/2017' })
