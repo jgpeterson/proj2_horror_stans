@@ -85,7 +85,7 @@ router.get('/:theaterId', (request, response) => {
 })
 
 
-router.get('/:theaterId/delete', (request, response) => {
+router.get('/:theaters/theaterId/events', (request, response) => {
     const theaterId = request.params.theaterId
 
     TheaterModel.findByIdAndRemove(theaterId)
@@ -96,5 +96,17 @@ router.get('/:theaterId/delete', (request, response) => {
         console.log(error)
     })
 })
+router.get('/:theaterId/delete', (request, response) => {
+    const theaterId = request.params.theaterId
 
+    TheaterModel.findByIdAndRemove(theaterId)
+    .then(() => {
+        response.redirect('/theaters')
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+
+
+})
 module.exports = router
