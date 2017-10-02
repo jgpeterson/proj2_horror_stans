@@ -24,6 +24,10 @@ h3 {
   margin: 0 0 10px 10px;
 }
 
+.last {
+  color:red;
+}
+
 .screen {
 
   font-size: 18px;
