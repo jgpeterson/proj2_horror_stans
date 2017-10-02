@@ -5,10 +5,12 @@
         <a href="/theaters/{{theater._id}}/events/new">Create a New Event</a>
     </div>
 
+    </br>
 
     <div>
         <a href="/theaters">Back to Theaters</a>
     </div>
+    </br>
 <div class="list">
     {{#each theater.events}}
         <div>
@@ -17,7 +19,7 @@
         </div>
     {{/each}}
 </div>
-   <div>
-         <img src="{{theater.location}}" alt="">
+   <div class="pic">
+         <img src="{{theater.location}}" alt="Location Info">
      </div>
 </div>
