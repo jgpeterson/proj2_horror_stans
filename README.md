@@ -1,1 +1,3 @@
-# proj2_horror_stans
+Horror Stans APP
+
+
