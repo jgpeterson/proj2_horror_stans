@@ -31,13 +31,13 @@ const Amc = new TheaterModel({ name: 'Amc', address: '619 Church St', location: 
 const Regal = new TheaterModel({ name: 'Regal', address: '425 Mary Way', location: "https://i.imgur.com/J90yo7hm.png"})
 const Fox = new TheaterModel({ name: 'Fox', address: '1428 Elm Street', location: "https://i.imgur.com/yBPGBWLm.png"})
 
-const horrorCon = new EventModel({ name: 'Horrorcon', type: 'Festival', date: '10/30/2017' })
-const bloodyDisgusting = new EventModel({ name: 'Bloody Disgusting', type: 'Festival', date: '10/31/2017' })
-const goreHound = new EventModel({ name: 'Gore Hound', type: 'Festival', date: '10/29/2017' })
+const comicCon = new EventModel({ name: 'Comic Con', type: 'Festival', date: '10/30/2017' })
+const dragonCon = new EventModel({ name: 'Dragon Con', type: 'Festival', date: '10/31/2017' })
+const starWars = new EventModel({ name: 'Star Wars', type: 'Festival', date: '10/29/2017' })
 
 // Here we assign some snowboards to each company.
 const theaters = [Amc, Regal, Fox]
-const events = [horrorCon, bloodyDisgusting, goreHound]
+const events = [comicCon, dragonCon, starWars]
 
 theaters.forEach((theater) => {
 
